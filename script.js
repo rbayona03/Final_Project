@@ -1,11 +1,21 @@
 const welcomeMsgDOM = document.querySelector('.welcomeMsg');
+const siteCountDOM = document.querySelector('.siteCounter');
+//Local Storage
+///User name
+let username = localStorage.getItem("username");
+if(!username){
+    username = prompt("Please enter username");
+    localStorage.setItem("username", username);
+};
+welcomeMsgDOM.insertAdjacentHTML('afterbegin', `
+<p class="userName">Hello <strong>${username}</strong></p>
+`);
 
-const userName = prompt('Welcome what is your name?');
-
-function createUserCookies(userName){
-    document.cookie = userName;
-}
-
-console.log(userName);
-
-//function checkUserCookie()
+///User Visits
+let visitCount = localStorage.getItem("pageVisit");
+localStorage.setItem("pageVisit", 1);
+let visitCounter = Number(visitCount) + 1;
+localStorage.setItem("pageVisit", visitCounter);
+siteCountDOM.insertAdjacentHTML('afterbegin', `
+<p class="count">Your Visits:${visitCount}</p>
+`)
