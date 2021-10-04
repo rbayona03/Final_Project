@@ -8,7 +8,7 @@ if(!username){
     localStorage.setItem("username", username);
 };
 welcomeMsgDOM.insertAdjacentHTML('afterbegin', `
-<p class="userName">Hello <strong>${username}</strong></p>
+<p class="userName">Hello, <strong>${username}</strong></p>
 `);
 
 ///User Visits
@@ -17,5 +17,5 @@ localStorage.setItem("pageVisit", 1);
 let visitCounter = Number(visitCount) + 1;
 localStorage.setItem("pageVisit", visitCounter);
 siteCountDOM.insertAdjacentHTML('afterbegin', `
-<p class="count">Your Visits:${visitCount}</p>
+<p class="count">You have visited: ${visitCount} times</p>
 `)
