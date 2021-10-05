@@ -32,11 +32,14 @@ nav{
     align-self: flex-end;
     padding: 4px 8px;
     cursor: pointer;
-    text-decoration: none;
     margin: 30px auto 0;
     display: block;
     position: relative;
     transition: 0.3s;
+}
+
+.nav_lnk a{
+    text-decoration: none;
 }
 
 .nav_lnk:before {
@@ -98,14 +101,170 @@ nav{
 footer{
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 
+/*gallery*/
 
+.galleryCont{
+    display: flex;
+    flex-direction: column;
+}
 
+.galleryCont h1{
+    font-size: 72px;
+    border-bottom: 2px solid black;
+    line-height: -10px;
+}
 
+.gallery{
+    width: 550px;
+    height: 400px;
+}
+.sliderContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: crimson;
+}
+.sliderContainer img{
+    width: inherit;
+    height: inherit;
+}
 
+.crtlBtn{
+    position: absolute;
+    cursor: pointer;
+    font-size: 28px;
+    padding: 5px 12px;
+    border-radius: 10px;
+}
+.prevSlide{
+    top: 50%;
+    left: 0;
+}
 
+.nextSlide{
+    top: 50%;
+    right: 0;
+}
 
+.crtlBtn:hover{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
+
+/*About Section*/
+
+.about{
+    display: flex;
+    width: fit-content;
+    height: 90vh;
+    margin: auto;
+    align-items: center;
+}
+
+.abtHero{
+    position: relative;
+}
+
+.abtImg1{
+    filter: grayscale(98%);
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 250ms ease-in;
+}
+
+.abtImg2{
+    position: absolute;
+    left: 0;
+    z-index: -1;    
+}
+
+.hidden{
+opacity: 0;
+}
+
+.aboutInfo_Par h1{
+    font-size: 42px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+.aboutInfo_Chld{
+    list-style: none;
+    font-size: 18px;
+    width: 70%;
+    line-height: 30px;
+}
+
+/*contact page*/
+
+.formGroup label{
+    display: block;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.formGroup input{
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+input.invalid{
+    border: 1px solid red;
+}
+
+.error-hint{
+    color: red;
+    font-size: 18px;
+}
+
+.hiddenMsg{
+    display: none;
+}
+
+.submitMsg{
+    padding: 40px;
+    font-size: 32px;
+    text-align: center;
+}
+
+button{
+    padding: 10px;
+    font-size: 18px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid orange;
+    color: orange;
+}
+
+form{
+    width: fit-content;
+    margin: auto;
+    height: 100%;
+}
+
+/*Graduation CountDown*/
+.gradSec{
+    text-align: center;
+    transform: translateY(50%);
+}
+#clock{
+    font-size: 36px;
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+}
 
 
 

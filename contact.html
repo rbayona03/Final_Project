@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Final Project</title>
 </head>
@@ -14,19 +15,54 @@
         </div>
         <div class="navLinksContainer">
             <ul class="navLinks">
-                <li class="nav_lnk">Home</li>
-                <li class="nav_lnk">Gallery</li>
-                <li class="nav_lnk">About</li>
-                <li class="nav_lnk">Contact</li>
-                <li class="nav_lnk">Js pen</li>
+                <li class="nav_lnk"><a href="index.html">Home</a></li>
+                <li class="nav_lnk"><a href="gallery.html">Gallery</a></li>
+                <li class="nav_lnk"><a href="about.html">About</a></li>
+                <li class="nav_lnk"><a href="contact.html">Contact</a></li>
+                <li class="nav_lnk"><a href="gradAPI.html">Graduation</a></li>
             </ul>
         </div>
     </nav>
-    🚧 contact Underconstruction 🚧
-
+    <form action="http://ss1.ciwcertified.com/cgi-bin/process.pl" name="contactForm" target="blank" novalidate>
+        <h1>Contact Form</h1>
+        <div class="formGroup">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name">
+            <div class="error-hint hiddenMsg">*Required</div>
+        </div>
+        <div class="formGroup">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name">
+            <div class="error-hint hiddenMsg">*Required</div>
+        </div>
+        <div class="formGroup">
+            <label for="email">Email:</label>
+            <input type="text"  id="email" name="email" placeholder="email@example.com">
+            <div class="error-hint hiddenMsg">*invalid email</div>
+        </div>
+        <div class="formGroup">
+            <label for="pWord">Password:</label>
+            <input type="text"  id="pWord" name="pWord" placeholder="P@$$W0rD">
+            <div class="error-hint hiddenMsg">*invalid password</div>
+        </div>
+        <div class="formGroup">
+            <label for="date">Date:</label>
+            <input type="month" name="date" id="datepicker">
+        </div>
+        <div class="formGroup">
+            <label for="msg">Message:</label>
+            <textarea name="msg" id="msg" cols="34" rows="10" maxlength="500" placeholder="your message here"></textarea>
+        </div>        
+        <hr/>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="submitMsg hiddenMsg">
+        <p>Thank you for your submission!</p>
+    </div>
     <footer>
         &copy;copyright 2021 | Bayona Web Media
     </footer>
 </body>
-<script src="script.js"></script>
+<script src="script/script.js"></script>
+<script src="script/contact.js"></script>
 </html>
