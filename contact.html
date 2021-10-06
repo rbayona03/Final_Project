@@ -10,16 +10,14 @@
 </head>
 <body>
     <nav>
-        <div class="welcomeMsg">
-            <div class="siteCounter"></div>
-        </div>
+        <div class="welcomeMsg"></div>
         <div class="navLinksContainer">
             <ul class="navLinks">
                 <li class="nav_lnk"><a href="index.html">Home</a></li>
                 <li class="nav_lnk"><a href="gallery.html">Gallery</a></li>
                 <li class="nav_lnk"><a href="about.html">About</a></li>
                 <li class="nav_lnk"><a href="contact.html">Contact</a></li>
-                <li class="nav_lnk"><a href="gradAPI.html">Graduation</a></li>
+                <li class="nav_lnk"><a href="countDown.html">Graduation</a></li>
             </ul>
         </div>
     </nav>
@@ -38,12 +36,12 @@
         <div class="formGroup">
             <label for="email">Email:</label>
             <input type="text"  id="email" name="email" placeholder="email@example.com">
-            <div class="error-hint hiddenMsg">*invalid email</div>
+            <div class="error-hint hiddenMsg">*invalid email entry</div>
         </div>
         <div class="formGroup">
             <label for="pWord">Password:</label>
             <input type="text"  id="pWord" name="pWord" placeholder="P@$$W0rD">
-            <div class="error-hint hiddenMsg">*invalid password</div>
+            <div class="error-hint hiddenMsg">*invalid password entry</div>
         </div>
         <div class="formGroup">
             <label for="date">Date:</label>
@@ -54,7 +52,7 @@
             <textarea name="msg" id="msg" cols="34" rows="10" maxlength="500" placeholder="your message here"></textarea>
         </div>        
         <hr/>
-        <button type="submit">Submit</button>
+        <button class="formBtn" type="submit">Submit</button>
     </form>
     <div class="submitMsg hiddenMsg">
         <p>Thank you for your submission!</p>

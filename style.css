@@ -73,6 +73,7 @@ nav{
 .userName{
     margin: 0;
     font-size: 24px;
+    padding-left: 10px;
 }
 
 .siteCounter{
@@ -82,9 +83,14 @@ nav{
 
 .intro{
     width: fit-content;
+    height: 95vh;
     margin: auto;
     display: flex;
     align-items: center;
+}
+
+.heroImg img{
+    width: 400px;
 }
 
 .heroTitle h1{
@@ -99,7 +105,7 @@ nav{
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
 }
@@ -109,6 +115,8 @@ footer{
 .galleryCont{
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    margin: auto;
 }
 
 .galleryCont h1{
@@ -125,7 +133,6 @@ footer{
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: crimson;
 }
 .sliderContainer img{
     width: inherit;
@@ -202,15 +209,21 @@ opacity: 0;
 
 /*contact page*/
 
+.formGroup{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 5px;
+}
+
 .formGroup label{
     display: block;
-    font-size: 24px;
-    margin-bottom: 2px;
+    font-size: 18px;
+    margin-right: 2px;
 }
 
 .formGroup input{
-    padding: 10px;
-    font-size: 20px;
+    padding: 8px;
+    font-size: 14px;
     color: #333;
 }
 
@@ -233,8 +246,9 @@ input.invalid{
     text-align: center;
 }
 
-button{
+.formBtn{
     padding: 10px;
+    width: 100%;
     font-size: 18px;
     background: none;
     border: 1px solid black;
@@ -243,28 +257,73 @@ button{
     cursor: pointer;
 }
 
-button:hover{
-    border: 1px solid orange;
-    color: orange;
+.formBtn:hover{
+    border: 1px solid whitesmoke;
+    background-color: goldenrod;
 }
 
 form{
     width: fit-content;
     margin: auto;
-    height: 100%;
+    padding: 25px 30px;
+    background-color: whitesmoke;
 }
+
+form h1{
+    text-align: center;
+}
+
+
 
 /*Graduation CountDown*/
 .gradSec{
     text-align: center;
-    transform: translateY(50%);
-}
-#clock{
-    font-size: 36px;
-    width: fit-content;
-    margin: auto;
-    text-align: left;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
+
+#clock{
+    width: fit-content;
+    margin: auto;
+}
+
+.timeContainer{
+    display: flex;
+    position: relative;
+
+}
+
+.gCap{
+    position: absolute;
+    top: -40px;
+    left: -15px;
+    transform: rotate(-15deg);
+}
+
+.time{
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-right: 4px;
+    font-size: 30px;
+}
+
+.timeDays{
+    background-color: red;
+}
+
+.timeHrs{
+    background-color: white;
+}
+
+.timeMin{
+    background-color: slateblue;
+}
+
+.timeSec{
+    background-color: gold;
+}
 
 

@@ -1,4 +1,4 @@
-const countDown = '2021-12-14';
+const countDown = '2021-12-15';
 
 function getTimeRemaining(endtime){
     const total = Date.parse(endtime) - Date.parse(new Date());
@@ -19,12 +19,17 @@ function getTimeRemaining(endtime){
 function initializeClock(id, endtime) {
   const clock = document.getElementById(id);
   const timeinterval = setInterval(() => {
-    const t = getTimeRemaining(endtime);
-    clock.innerHTML = 'Days: ' + t.days + '<br>' +
-                      'Hours: '+ t.hours + '<br>' +
-                      'Minutes: ' + t.minutes + '<br>' +
-                      'Seconds: ' + t.seconds;
-    if (t.total <= 0) {
+    const time = getTimeRemaining(endtime);
+    clock.innerHTML = `
+    <div class="timeContainer">
+      <img class="gCap" src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-graduation-hat-event-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"/>
+      <div class=" time timeDays"><h2>Days: ${time.days}</h2></div>
+      <div class="time timeHrs"><h2> Hrs: ${time.hours}</h2></div>
+      <div class="time timeMin"><h2> Min: ${time.minutes}</h2></div>
+      <div class="time timeSec"><h2> Sec: ${time.seconds}</h2></div>
+    </div>
+    `
+    if (time.total <= 0) {
       clearInterval(timeinterval);
     }
   },1000);
